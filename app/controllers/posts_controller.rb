@@ -15,4 +15,9 @@ class PostsController < ApplicationController
       flash[:alert] = "投稿に失敗しました"
     end
   end
+
+  private
+    def post_params
+      params.require(:post)
+    end
 end
