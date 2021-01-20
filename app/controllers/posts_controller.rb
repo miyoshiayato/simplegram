@@ -3,4 +3,7 @@ class PostsController < ApplicationController
     @post = Post.new
     @post.photos.build
   end
+
+  def create
+    @post = Post.new(post_params)
 end
