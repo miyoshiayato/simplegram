@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   get '/users/:id', to: 'users#show', as: 'user'
+
+  get '/posts/new/', to: 'posts#new'
+  
 end
