@@ -14,6 +14,9 @@
                 <%= image_tag avatar_url(current_user), class: "post-profile-icon" %>
               <% end %>
             </div>
+            <div class="col pl-0">
+              <%= f.text_field :caption, class: "form-control border-0", placeholder: "キャプションを書く" %>
+            </div>
           </div>
         <% end %>
       </div>
