@@ -25,11 +25,9 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find_by(id: params[:id])
   end
 
   def destroy
-    @post = Post.find_by(id: params[:id])
     if @post.user == current_user
       if @post.destroy
         flash[:notice] = "投稿が削除されました"
