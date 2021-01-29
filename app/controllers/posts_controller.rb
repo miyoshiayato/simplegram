@@ -44,4 +44,8 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:caption,photos_attributes: [:image]).merge(user_id: current_user.id)
     end
+
+    def set_post
+      @post = Post.find_by(id: params[:id])
+    end 
 end
